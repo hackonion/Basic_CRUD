@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Empleado>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<div>
+    <a asp-controller="Home" asp-action="Edit">Create Post</a>
+    <ul>
+        @foreach (var empleado in Model)
+        {
+            <li>
+                @empleado.Id
+                -
+                @empleado.Name
+                -
+                @empleado.Puesto
+                -
+                <a asp-controller="Home" asp-action="Edit" asp-route-id="@empleado.Id">
+                    Edit
+                </a>
+                -
+                <a asp-controller="Home" asp-action="Remove" asp-route-id="@empleado.Id">
+                    Remove
+                </a>
+            </li>
+
+
+        }
+    </ul>
+</div>

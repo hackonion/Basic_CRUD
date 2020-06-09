@@ -1,0 +1,17 @@
+﻿@model Empleado;
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+<div>
+    <form asp-controller="Home" asp-action="Edit" method="post">
+        <div>
+            <label>Title</label>
+            <input type="text" asp-for="Name" />
+            <label>Body</label>
+            <input type="text" asp-for="Puesto" />
+        </div>
+        <input type="submit" value="Submit" />
+    </form>
+</div>
